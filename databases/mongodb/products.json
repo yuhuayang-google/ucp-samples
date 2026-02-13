@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "product-1",
+    "title": "Wireless Noise-Cancelling Headphones",
+    "price": 24999,
+    "image_url": "https://example.com/images/headphones.jpg"
+  },
+  {
+    "_id": "product-2",
+    "title": "Smartwatch with Health Tracker",
+    "price": 19999,
+    "image_url": "https://example.com/images/smartwatch.jpg"
+  },
+  {
+    "_id": "product-3",
+    "title": "Portable Bluetooth Speaker",
+    "price": 7999,
+    "image_url": "https://example.com/images/speaker.jpg"
+  }
+]
