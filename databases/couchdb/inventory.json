@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "product-1",
+    "quantity": 60
+  },
+  {
+    "_id": "product-2",
+    "quantity": 40
+  },
+  {
+    "_id": "product-3",
+    "quantity": 110
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "_id": "couchdb-checkout-123",
+    "type": "checkout",
+    "status": "completed",
+    "data": {
+      "id": "couchdb-checkout-123",
+      "currency": "USD",
+      "status": "completed",
+      "line_items": [
+        {
+          "id": "couchdb-item-1",
+          "item": {
+            "id": "product-1",
+            "title": "CouchDB Wireless Noise-Cancelling Headphones",
+            "price": 25999
+          },
+          "quantity": 1,
+          "totals": [
+            {
+              "amount": 25999,
+              "type": "subtotal"
+            }
+          ]
+        }
+      ],
+      "totals": [
+        {
+          "amount": 25999,
+          "type": "total"
+        }
+      ],
+      "payment": {
+        "handlers": [],
+        "instruments": [],
+        "selected_instrument_id": null
+      },
+      "links": [],
+      "ucp": {
+        "capabilities": [],
+        "version": "1.0"
+      }
+    }
+  },
+  {
+    "_id": "couchdb-order-456",
+    "type": "order",
+    "data": {
+      "id": "couchdb-order-456",
+      "checkout_id": "couchdb-checkout-123",
+      "permalink_url": "https://example.com/order/couchdb-order-456",
+      "line_items": [
+        {
+          "id": "couchdb-item-1",
+          "item": {
+            "id": "product-1",
+            "title": "CouchDB Wireless Noise-Cancelling Headphones",
+            "price": 25999
+          },
+          "quantity": {
+            "fulfilled": 1,
+            "total": 1
+          },
+          "status": "fulfilled",
+          "totals": [
+            {
+              "amount": 25999,
+              "type": "subtotal"
+            }
+          ]
+        }
+      ],
+      "totals": [
+        {
+          "amount": 25999,
+          "type": "total"
+        }
+      ],
+      "fulfillment": {},
+      "ucp": {
+        "capabilities": [],
+        "version": "1.0"
+      }
+    }
+  },
+  {
+    "_id": "couchdb-idempotency-key-789",
+    "type": "idempotency_key",
+    "request_hash": "some_couchdb_hash_value",
+    "response_status": 200,
+    "response_body": "{"message": "couchdb success"}"
+  },
+  {
+    "_id": "couchdb-request-logs-1",
+    "type": "request_log",
+    "method": "POST",
+    "url": "/api/checkout",
+    "checkout_id": "couchdb-checkout-123",
+    "payload": {
+      "productId": "product-1",
+      "quantity": 1
+    }
+  }
+]
