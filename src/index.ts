@@ -8,6 +8,7 @@ import {CheckoutService, zCompleteCheckoutRequest} from './api/checkout';
 import {DiscoveryService} from './api/discovery';
 import {FirestoreService} from './api/firestore';
 import {OrderService} from './api/order';
+import {MongodbService} from './api/mongodb';
 import {TestingService} from './api/testing';
 import {initDbs} from './data/db';
 import {
@@ -25,6 +26,7 @@ const checkoutService = new CheckoutService();
 const orderService = new OrderService();
 const discoveryService = new DiscoveryService();
 const firestoreService = new FirestoreService();
+const mongodbService = new MongodbService();
 const testingService = new TestingService(checkoutService);
 
 // Setup logging for each request
@@ -124,6 +126,14 @@ app.get(
   '/firestore/products/:id',
   zValidator('param', IdParamSchema, prettyValidation),
   firestoreService.getProduct,
+);
+
+/* MongoDB endpoints */
+app.get('/mongodb/products', mongodbService.getProducts);
+app.get(
+  '/mongodb/products/:id',
+  zValidator('param', IdParamSchema, prettyValidation),
+  mongodbService.getProduct,
 );
 
 /* Testing endpoints */
