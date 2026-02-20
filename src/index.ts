@@ -10,6 +10,7 @@ import {FirestoreService} from './api/firestore';
 import {OrderService} from './api/order';
 import {MongodbService} from './api/mongodb';
 import {TestingService} from './api/testing';
+import {oauth} from './api/oauth';
 import {initDbs} from './data/db';
 import {
   ExtendedCheckoutCreateRequestSchema,
@@ -142,6 +143,9 @@ app.post(
     zValidator('param', IdParamSchema, prettyValidation),
     testingService.shipOrder,
 );
+
+/* OAuth endpoints */
+app.route('/oauth', oauth);
 
 serve(
   {
