@@ -11,7 +11,7 @@ import {OrderService} from './api/order';
 import {MongodbService} from './api/mongodb';
 import {TestingService} from './api/testing';
 import {oauth} from './api/oauth';
-import {initDbs} from './data/db';
+import {initDb} from './data';
 import {
   ExtendedCheckoutCreateRequestSchema,
   ExtendedCheckoutUpdateRequestSchema,
@@ -21,7 +21,7 @@ import {IdParamSchema, prettyValidation} from './utils/validation';
 
 const app = new Hono();
 
-initDbs('databases/products.db', 'databases/transactions.db');
+await initDb();
 
 const checkoutService = new CheckoutService();
 const orderService = new OrderService();

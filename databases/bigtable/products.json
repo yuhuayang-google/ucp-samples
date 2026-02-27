@@ -1,0 +1,15 @@
+
+[
+    {
+        "id": "1",
+        "name": "The Classic",
+        "description": "A classic burger",
+        "price": 10.99
+    },
+    {
+        "id": "2",
+        "name": "The Veggie",
+        "description": "A veggie burger",
+        "price": 9.99
+    }
+]
